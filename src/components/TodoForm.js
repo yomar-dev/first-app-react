@@ -22,7 +22,7 @@ class TodoForm extends Component{
 	}
 	handleSubmit(e){
 		e.preventDefault();
-		console.log(this.state);
+		this.props.onAddTodo(this.state);
 		console.log('Creando tarea.');
 	}
 
