@@ -11,6 +11,7 @@ class TodoForm extends Component{
 		}
 
 		this.handleInputChange = this.handleInputChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleInputChange(e){
@@ -18,13 +19,17 @@ class TodoForm extends Component{
 		this.setState({
 			[name]: value
 		})
+	}
+	handleSubmit(e){
+		e.preventDefault();
 		console.log(this.state);
+		console.log('Creando tarea.');
 	}
 
 	render() {
 	    return (
 	      	<div className="card">
-	        	<form onSubmit={this.handleSubmit} className="card-body">
+	        	<form onSubmit={this.handleSubmit} className="card-body" onSubmit={this.handleSubmit}>
 	          		<div className="form-group">
 	            		<input
 	              			type="text"

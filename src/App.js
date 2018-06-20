@@ -50,7 +50,8 @@ class App extends Component {
                     <div className="row mt-4">
                         <div className="col-md-4 text-center">
                             <img src={logo} className="App-logo" alt="logo" />
-                            <TodoForm></TodoForm>
+                            //<TodoForm onAddTodo={this.handleAddTodo}></TodoForm>
+                            <TodoForm />
                         </div>
 
                     <div className="col-md-8">
