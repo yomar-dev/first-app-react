@@ -9,10 +9,16 @@ class TodoForm extends Component{
 			description: '',
 			priority: ''
 		}
+
+		this.handleInputChange = this.handleInputChange.bind(this);
 	}
 
-	handleInputChange(){
-		console.log('Escribiendo...');
+	handleInputChange(e){
+		const { value, name } = e.target;
+		this.setState({
+			[name]: value
+		})
+		console.log(this.state);
 	}
 
 	render() {
