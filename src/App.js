@@ -23,11 +23,13 @@ class App extends Component {
     }
 
     removeTodo(index){
-        this.setState({
-            todos: this.state.todos.filter((e, i) => {
-                return i !== index
+        if(window.confirm("¿Desea eliminar la tarea?")){
+            this.setState({
+                todos: this.state.todos.filter((e, i) => {
+                    return i !== index
+                })
             })
-        })
+        }
     }
 
     render() {
